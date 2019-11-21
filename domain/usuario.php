@@ -1,12 +1,12 @@
 <?php
 
 class Usuario{
-    public $id:
+    public $id;
     public $nomeusuario;
     public $senha;
     public $foto;
 
-    public function __contructor($db){
+    public function __construct($db){
         $this->conexao = $db;
     }
 
@@ -23,7 +23,7 @@ class Usuario{
         select que será executada posteriomente.
         */
 
-        $stmt = $this->conexao->prepare($query);
+        $stmt = $this -> conexao -> prepare ($query);
 
         #execução da consulta a guarda de dados na variavel stml
 
@@ -145,7 +145,5 @@ class Usuario{
         }
     }
     }
-
-}
 
 ?>
