@@ -97,7 +97,7 @@ class Usuario{
 
     }
     public function alterarFoto(){
-        $query = "update usuario set foto=:f where id=i";
+        $query = "update usuario set foto=:f where id=:i";
 
         $stmt = $this->conexao->prepare($query);
 
