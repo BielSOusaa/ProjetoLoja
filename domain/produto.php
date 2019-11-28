@@ -41,7 +41,7 @@ class Produto{
     Função para cadastrar os produtos no banco de dados
     */
     public function cadastro(){
-        $query = "insert into produto set nome=:n, descricao=:d, preco=:p, imagem=:i1, imagem=:i2, imagem=:i3, imagem=:i4";
+        $query = "insert into produto set nome=:n, descricao=:d, preco=:p, imagem1=:i1, imagem2=:i2, imagem3=:i3, imagem4=:i4";
 
         $stmt = $this->conexao->prepare($query);
 
@@ -79,7 +79,7 @@ class Produto{
     }
 
     public function alterarProduto(){
-        $query = "update produto set nome=:n, descricao=:d, preco=:p, imagem=:i1, imagem=:i2, imagem=:i3, imagem=:i4 where id=:i";
+        $query = "update produto set nome=:n, descricao=:d, preco=:p, imagem1=:i1, imagem2=:i2, imagem3=:i3, imagem4=:i4 where id=:i";
 
         $stmt = $this->conexao->prepare($query);
 
