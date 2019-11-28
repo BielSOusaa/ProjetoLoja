@@ -34,7 +34,11 @@ create table Produto(
 id int auto_increment primary key,
 nome varchar(100) not null,
 descricao text not null,
-preco decimal(10,2) not null
+preco decimal(10,2) not null,
+imagem1 varchar (200) not null,
+imagem2 varchar (200) not null,
+imagem3 varchar (200) not null,
+imagem4 varchar (200) not null
 )engine InnoDB;
 
 create table Estoque(
