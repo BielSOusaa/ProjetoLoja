@@ -60,9 +60,9 @@ da consulta que está na função listar. Dentro da função listar() Temos uma
 consulta no formato sql que seleciona todos os produto("Select * from produto")
 */
 
-$produto->id = $data->id;
+$produto->nome = $data->nome;
 
-$stmt = $produto->pesquisar_id();
+$stmt = $produto->pesquisar_nome();
 
 /*
 Se a consulta retorna uma quantidade de linhas maior que 0(zero). então será
