@@ -34,6 +34,49 @@ class Cliente{
         #retorna os dados do usuario a camada data.
         return $stmt;
     }
+
+
+
+    public function pesquisar_id(){
+        #Selecione todos os campos da tabela cliente 
+        $query = "select * from cliente where id=?";
+
+        /*
+        Foi criada a variavel stmt(Statment -> Sentença) para guardar a preparação da consulta
+        select que será executada posteriomente.
+        */
+
+        $stmt = $this -> conexao -> prepare ($query);
+        $stmt->bindParam(1,$this->id);
+
+        #execução da consulta a guarda de dados na variavel stml
+
+        $stmt->execute();
+
+        #retorna os dados do usuario a camada data.
+        return $stmt;
+    }
+
+    public function pesquisar_nome(){
+        #Selecione todos os campos da tabela cliente 
+        $query = "select * from cliente where nome like ?";
+
+        /*
+        Foi criada a variavel stmt(Statment -> Sentença) para guardar a preparação da consulta
+        select que será executada posteriomente.
+        */
+
+        $stmt = $this -> conexao -> prepare ($query);
+        $stmt->bindParam(1,$this->nome);
+
+        #execução da consulta a guarda de dados na variavel stml
+
+        $stmt->execute();
+
+        #retorna os dados do usuario a camada data.
+        return $stmt;
+    }
+
     
     /*
     Função para cadastrar os clientes no banco de dados
