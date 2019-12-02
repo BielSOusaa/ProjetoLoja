@@ -46,3 +46,6 @@ Abaixo é apresentado o diagrama de banco de dados desenvolvido
 para este projeto.
 
 ![](db/img/diagramabanco.png)
+
+## work flow do APP
+![](img/workflow.png)
