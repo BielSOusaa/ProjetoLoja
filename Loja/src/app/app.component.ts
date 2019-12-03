@@ -30,6 +30,11 @@ export class AppComponent {
       title: 'Sair',
       url: '/sair',
       icon: 'exit'
+    },
+    {
+      title: 'Politica',
+      url: '/politica',
+      icon: 'contact'
     }
   ];
 
