@@ -22,6 +22,38 @@ const routes: Routes = [
   {
     path: 'sair',
     loadChildren: () => import('./sair/sair.module').then( m => m.SairPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'cadastrar',
+    loadChildren: () => import('./cadastrar/cadastrar.module').then( m => m.CadastrarPageModule)
+  },
+  {
+    path: 'politica',
+    loadChildren: () => import('./politica/politica.module').then( m => m.PoliticaPageModule)
+  },
+  {
+    path: 'foto',
+    loadChildren: () => import('./foto/foto.module').then( m => m.FotoPageModule)
+  },
+  {
+    path: 'senha',
+    loadChildren: () => import('./senha/senha.module').then( m => m.SenhaPageModule)
+  },
+  {
+    path: 'detalheproduto',
+    loadChildren: () => import('./detalheproduto/detalheproduto.module').then( m => m.DetalheprodutoPageModule)
+  },
+  {
+    path: 'efetuarpedido',
+    loadChildren: () => import('./efetuarpedido/efetuarpedido.module').then( m => m.EfetuarpedidoPageModule)
+  },
+  {
+    path: 'pagamento',
+    loadChildren: () => import('./pagamento/pagamento.module').then( m => m.PagamentoPageModule)
   }
 ];
 
