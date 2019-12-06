@@ -9,4 +9,23 @@
 
 <ion-content>
 
+
+    <ion-card class="welcome-card" *ngFor="let p of produtos">
+      
+      <img src="/assets/{{p.imagem1 }}" alt=""/>
+      <img src="/assets/{{p.imagem2 }}" alt=""/>
+      <img src="/assets/{{p.imagem3 }}" alt=""/>
+      <img src="/assets/{{p.imagem4 }}" alt=""/>
+
+      <ion-card-header>
+          <ion-card-title>{{ p.nome }}</ion-card-title>
+        <ion-card-subtitle>R$ {{ p.preco }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ p.descricao}}</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button>Efetuar Compra</ion-button>
+
 </ion-content>

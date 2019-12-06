@@ -37,7 +37,7 @@ class Produto{
         return $stmt;
     }
 
-    public function pesquisar_id(){
+    public function pesquisar_id($idproduto){
         #Selecione todos os campos da tabela cliente 
         $query = "select * from produto where id=?";
 
@@ -47,7 +47,7 @@ class Produto{
         */
 
         $stmt = $this -> conexao -> prepare ($query);
-        $stmt->bindParam(1,$this->id);
+        $stmt->bindParam(1,$idproduto);
 
         #execução da consulta a guarda de dados na variavel stml
 
