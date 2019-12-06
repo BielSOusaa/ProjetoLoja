@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController, NavParams } from '@ionic/angular';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-detalheproduto',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetalheprodutoPage implements OnInit {
 
-  constructor() { }
+
+  private idProduto:any;
+
+  constructor(private active: ActivatedRoute) {
+
+    
+   }
 
   ngOnInit() {
+    this.active.params.subscribe((params)=>{
+      this.idProduto = params.idprod;
+      console.log("Esse id está em Detalhes ",params);
+    });
+    console.log("Definitivo "+this.idProduto);
+    
   }
 
 }

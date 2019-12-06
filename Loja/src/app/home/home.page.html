@@ -14,15 +14,15 @@
 
 <ion-searchbar showCancelButton="never"></ion-searchbar>
 
-    <ion-card class="welcome-card" *ngFor="let p of produtos">
+    <ion-card class="welcome-card" *ngFor="let p of produtos" (click)="navDetalheProduto(p.id)">
       
-      <img src="/assets/{{p.imagem1 }}" alt="" (click)="navDetalheProduto(p.id)"/>
+      <img src="/assets/{{p.imagem1 }}" alt=""/>
       <ion-card-header>
           <ion-card-title>{{ p.nome }}</ion-card-title>
         <ion-card-subtitle>R$ {{ p.preco }}</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
-        <p>{{ p.descricao }}</p>
+        <p>Parcela em até 5x sem juros</p>
       </ion-card-content>
     </ion-card>
 
