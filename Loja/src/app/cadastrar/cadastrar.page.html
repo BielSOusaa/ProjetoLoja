@@ -8,62 +8,62 @@
 
   <ion-item>
     <ion-label position="floating">Usuário</ion-label>
-    <ion-input type="text" name="usuario" id="usuario"></ion-input>
+    <ion-input type="text" name="usuario" id="usuario" [(ngModel)]="model.usuario"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">Senha</ion-label>
-    <ion-input type="text" name="senha" id="senha"></ion-input>
+    <ion-input type="password" name="senha" id="senha" [(ngModel)]="model.senha"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">Foto</ion-label>
-    <ion-input type="text" name="foto" id="foto"></ion-input>
+    <ion-input type="text" name="foto" id="foto" [(ngModel)]="model.foto"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">Nome</ion-label>
-    <ion-input type="text" name="nome" id="nome"></ion-input>
+    <ion-input type="text" name="nome" id="nome" [(ngModel)]="model.nome"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">CPF</ion-label>
-    <ion-input type="text" name="cpf" id="cpf"></ion-input>
+    <ion-input type="number" name="cpf" id="cpf" [(ngModel)]="model.cpf"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">Logradouro</ion-label>
-    <ion-input type="text" name="logradouro" id="logradouro"></ion-input>
+    <ion-input type="text" name="logradouro" id="logradouro" [(ngModel)]="model.logradouro"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">Número</ion-label>
-    <ion-input type="number" name="numero" id="numero"></ion-input>
+    <ion-input type="number" name="numero" id="numero" [(ngModel)]="model.numero"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">Complemento</ion-label>
-    <ion-input type="text" name="complemento" id="complemento"></ion-input>
+    <ion-input type="text" name="complemento" id="complemento" [(ngModel)]="model.complemento"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">Bairro</ion-label>
-    <ion-input type="text" name="bairro" id="bairro"></ion-input>
+    <ion-input type="text" name="bairro" id="bairro" [(ngModel)]="model.bairro"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">CEP</ion-label>
-    <ion-input type="number" name="cep" id="cep"></ion-input>
+    <ion-input type="number" name="cep" id="cep" [(ngModel)]="model.cep"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">Telefone</ion-label>
-    <ion-input type="tel" name="telefone" id="telefone"></ion-input>
+    <ion-input type="tel" name="telefone" id="telefone" [(ngModel)]="model.telefone"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">E-Mail</ion-label>
-    <ion-input type="email" name="email" id="email"></ion-input>
+    <ion-input type="email" name="email" id="email" [(ngModel)]="model.email"></ion-input>
   </ion-item>
 
   <ion-label (click)="efetuarcadastro()" class="bntFacebook">
