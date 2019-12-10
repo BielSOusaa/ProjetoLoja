@@ -13,3 +13,22 @@ export class CadastrarPage implements OnInit {
   }
 
 }
+
+export class DadosCadastrar{
+  nome:string;
+  cpf:string;
+  usuario:string;
+  senha:string;
+  foto:string;
+  logradouro:string;
+  numero:string;
+  complemento:string;
+  bairro:string;
+  cep:string;
+  telefone:string;
+  email:string;
+  
+  
+  
+
+}
