@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpHeaders } from '@angular/common/http';
+import { HttpHeaders, HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-cadastrar',
@@ -8,9 +8,10 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class CadastrarPage implements OnInit {
 
+  private url:string = "http://localhost/dbloja/data/cadgeral/cadastro.php";
   public model:DadosCadastrar = null;
 
-  constructor() {
+  constructor(private http:HttpClient) {
 
     this.model = new DadosCadastrar();
 
@@ -49,7 +50,16 @@ export class CadastrarPage implements OnInit {
       "cep":this.model.cep,
       "nome":this.model.nome,
       "cpf":this.model.cpf
-    }
+    };
+
+    this.http.post(this.url,dados,{headers:headers}).subscribe(
+      data=>{
+        console.log(data);
+      },
+      error=>{
+        console.log("Erro ao tentar cadastrar => "+error);
+      }
+      );
 
   }
 
