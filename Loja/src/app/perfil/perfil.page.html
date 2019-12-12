@@ -9,4 +9,61 @@
 
 <ion-content>
 
+  <ion-list *ngFor="let pr of perfil">
+
+    <ion-item>
+
+      <img src="assets/imgusuario/admin.png">
+
+      
+    <ion-label>
+        <ion-icon name="contact"></ion-icon>
+      {{ pr.nome }}
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+        <ion-icon name="contacts"></ion-icon>
+      {{ pr.nomeusuario }}
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+        <ion-icon name="pin"></ion-icon>
+      {{ pr.logradouro }}
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+        <ion-icon name="remove-circle-outline"></ion-icon>
+      {{ pr.numero }}
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+        <ion-icon name="menu"></ion-icon>
+      {{ pr.complemento }}
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+        <ion-icon name="home"></ion-icon>
+      {{ pr.bairro }}
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+        <ion-icon name="globe"></ion-icon>
+      {{ pr.cep }}
+    </ion-label>
+  </ion-item>
+
+  </ion-list>
+
 </ion-content>

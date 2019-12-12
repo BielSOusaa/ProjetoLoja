@@ -43,7 +43,7 @@ class Usuario{
         $query = "select u.id as 'idusuario',u.nomeusuario,u.foto,c.id as 'idcliente',c.nome, e.* from
          usuario u inner join cliente c on u.id=c.id_usuario
          inner join endereco e on c.id_endereco = e.id
-         where u.nomeusuario=? and u.senha=?;
+         where u.nomeusuario=? and u.senha=?";
 
         /*
         Abaixo há uma ligação com os paramêtros da consulta(bind-lagação |

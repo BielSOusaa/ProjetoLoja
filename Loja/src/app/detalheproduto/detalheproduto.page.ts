@@ -46,4 +46,12 @@ export class DetalheprodutoPage implements OnInit {
     
   }
 
+
+  public exibirDados(){
+
+    var dados:any = window.localStorage.getItem("dadosCliente");
+    console.log("Estamos na pagina detalhes -> "+dados);
+
+  }
+
 }

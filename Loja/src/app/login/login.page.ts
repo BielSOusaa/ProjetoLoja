@@ -37,8 +37,26 @@ export class LoginPage implements OnInit {
 
     this.http.get(this.url,{headers:headers,params:dados}).subscribe(
       data=>{
-        if(!data== null){
-          this.router.navigate(['/home']);
+
+        var rs = (data as any);
+        console.log(rs);
+          var n:string = rs.saida[0].nome;
+
+          if(n!=""){
+            console.log(rs);
+            /*
+            Vamos pegar as informações que estão retornando da API deste usuário
+            logado e adicionar ao bando de dados do IONIC.
+            Utilizaremos o comando window.localStorage.setItem("Key","value");
+            O comando localStorage usa o banco de dados de ionic e consequentemente o banco
+            do telefone. Neste comando temos os seguinte métodos:
+            setItem -> quando se deseja gravar os dados no banco;
+            getItem -> quando se deseja resgatar os dados cadastrados no banco;
+            removeItem -> quando se deseja apagar os dados do banco de dados;
+            */
+
+            window.localStorage.setItem("dadosCliente",JSON.stringify(rs));
+            this.router.navigate(['/home']);
         }
         else
         {
@@ -52,7 +70,6 @@ export class LoginPage implements OnInit {
     );
 
   }
-
 
   ngOnInit() {
   }

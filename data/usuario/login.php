@@ -115,7 +115,7 @@ if($stmt->rowCount() > 0){
             "logradouro"=>$logradouro,
             "numero"=>$numero,
             "complemento"=>$complemento,
-            "bairro"=>$bairro,
+            "bairro"=>utf8_encode($bairro),
             "cep"=>$cep
         );
         /*
